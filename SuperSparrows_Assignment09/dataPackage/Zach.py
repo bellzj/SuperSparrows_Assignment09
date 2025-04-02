@@ -43,3 +43,17 @@ def fetch_manufacturer_name(manufacturer_id):
 
     return manufacturer[0] if manufacturer else None
 
+def fetch_brand_name(brand_id): #Abel
+    """Fetch Brand name using BrandID and return the name."""
+    conn = connect_to_database()
+    cursor = conn.cursor()
+
+    query = f"SELECT Brand FROM tBrand WHERE BrandID = {brand_id}"
+    cursor.execute(query)
+
+    brand = cursor.fetchone()
+
+    cursor.close()
+    conn.close()
+
+    return brand[0] if brand else None
