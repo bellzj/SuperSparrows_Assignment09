@@ -21,10 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="dataPackage\Abel.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="dataPackage\Nogaye.py">
+    <Compile Include="dataPackage\data.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="dataPackage\Zach.py">

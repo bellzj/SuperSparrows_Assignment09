@@ -1,10 +1,22 @@
 #main.py
+# File Name : main.py
+# Student Name: Nogaye Gueye, Zach Bell, Abel Yemaneab
+# email:  yemaneag@mail.uc.edu, gueyene@mail.uc.edu, bellzj@mail.uc.edu
+# Assignment Number: Assignment 09
+# Due Date:   04/03/2025
+# Course #/Section:   IS4010-001
+# Semester/Year:   Spring 2025
+# Brief Description of the assignment:  This assignment has us learn how to manipulate data from a sql server
 
-from dataPackage import Zach
+# Brief Description of what this module does. This module teaches us to utilize outside coding libraries.
+# Citations: https://stackoverflow.com/questions/44149394/select-a-random-row-from-the-table-using-python/44149478#44149478, https://stackoverflow.com/questions/55021558/randomly-choose-rows-from-table-python-pandas-read-sql
+from dataPackage.data import *
 import random
 
+# make instance of GroceryStoreDB
+Store = GroceryStoreDB()
 # Fetch product data
-products = Zach.fetch_products()
+products = Store.fetch_products()
 
 if products:
     # Randomly select a product
@@ -17,13 +29,13 @@ if products:
     brand_id = selected_product["BrandID"]
 
     # Fetch Manufacturer Name
-    manufacturer_name = Zach.fetch_manufacturer_name(manufacturer_id)
+    manufacturer_name = Store.fetch_manufacturer_name(manufacturer_id)
 
     # Fetch Brand Name
-    brand_name = Zach.fetch_brand_name(brand_id)  # Assuming you have a function for this
+    brand_name = Store.fetch_brand_name(brand_id)  # Assuming you have a function for this
 
     # Fetch Number of Items Sold
-    number_of_items_sold = Zach.fetch_number_of_items_sold(product_id)
+    number_of_items_sold = Store.fetch_number_of_items_sold(product_id)
 
     # Construct the sentence
     output_sentence = (
