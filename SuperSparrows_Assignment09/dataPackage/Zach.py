@@ -57,3 +57,24 @@ def fetch_brand_name(brand_id): #Abel
     conn.close()
 
     return brand[0] if brand else None
+
+def fetch_number_of_items_sold(product_id):
+    """Fetch the number of items sold for a given ProductID."""
+    conn = connect_to_database()
+    cursor = conn.cursor()
+
+    query = f"""
+    SELECT TOP (100) PERCENT SUM(dbo.tTransactionDetail.QtyOfProduct) AS NumberOfItemsSold
+    FROM dbo.tTransactionDetail
+    INNER JOIN dbo.tTransaction ON dbo.tTransactionDetail.TransactionID = dbo.tTransaction.TransactionID
+    WHERE (dbo.tTransaction.TransactionTypeID = 1) AND (dbo.tTransactionDetail.ProductID = {product_id})
+    """
+    
+    cursor.execute(query)
+    result = cursor.fetchone()
+
+    cursor.close()
+    conn.close()
+
+    return result[0] if result and result[0] is not None else 0
+
