@@ -24,9 +24,6 @@
     <Compile Include="dataPackage\data.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="dataPackage\Zach.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="dataPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>

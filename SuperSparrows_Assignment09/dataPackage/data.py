@@ -1,4 +1,16 @@
 # data.py
+# File Name : data.py
+# Student Name: Nogaye Gueye, Zach Bell, Abel Yemaneab
+# email:  yemaneag@mail.uc.edu, gueyene@mail.uc.edu, bellzj@mail.uc.edu
+# Assignment Number: Assignment 09
+# Due Date:   04/03/2025
+# Course #/Section:   IS4010-001
+# Semester/Year:   Spring 2025
+# Brief Description of the assignment:  This assignment has us learn how to manipulate data from a sql server
+
+# Brief Description of what this module does. This module teaches us to utilize outside coding libraries.
+# Citations: https://stackoverflow.com/questions/44149394/select-a-random-row-from-the-table-using-python/44149478#44149478, https://stackoverflow.com/questions/55021558/randomly-choose-rows-from-table-python-pandas-read-sql
+
 
 import pyodbc
 
