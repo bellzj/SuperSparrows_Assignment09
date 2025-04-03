@@ -19,3 +19,18 @@ if products:
     # Fetch Manufacturer Name
     manufacturer_name = Zach.fetch_manufacturer_name(manufacturer_id)
 
+    # Fetch Brand Name
+    brand_name = Zach.fetch_brand_name(brand_id)  # Assuming you have a function for this
+
+    # Fetch Number of Items Sold
+    number_of_items_sold = Zach.fetch_number_of_items_sold(product_id)
+
+    # Construct the sentence
+    output_sentence = (
+        f"The product '{description}', manufactured by {manufacturer_name} under the brand {brand_name}, "
+        f"has sold a total of {number_of_items_sold} units."
+    )
+
+    # Print the final sentence
+    print(output_sentence)
+
